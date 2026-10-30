@@ -12,7 +12,7 @@ npm run serve   # serves www/ on http://localhost:4173/
 npm run dev     # both
 ```
 
-Deploy the contents of `www/` to any static host. Every link is relative, so the site works from a sub-folder too. `www/404.html` is the not-found page; point the host's error page at it.
+Deploy the contents of `www/` to any static host. On Vercel, `vercel.json` sets the build command and the `www` output folder. Every link is relative, so the site works from a sub-folder too. `www/404.html` is the not-found page; point the host's error page at it.
 
 ## Layout
 
