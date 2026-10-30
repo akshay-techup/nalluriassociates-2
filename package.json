@@ -1,0 +1,12 @@
+{
+  "name": "nalluriassociates",
+  "private": true,
+  "type": "module",
+  "description": "Nalluri Associates website: static pages built with Node, no dependencies.",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "dev": "node build.mjs && node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,19 @@
+/* Hallmark · shape: Marquee Hero (branch homes), per-page shapes below · genre: editorial · theme: Ink (deal 3/3, seed nalluri-associates-home-loan-35c3·254babb8·2026-10-30·r0) · redesign: full · draw: 623c44
+ * hero: Ledge (/hyderabad/, /andhrapradesh/), Index (/), Banner (inner pages) · nav: floating pill · footer: colophon block with index columns · imagery: photographs (the client's own) · signature: the firm walking the red carpet into its Miyapur office under the metro line · ink: paper
+ * axes: light/grotesk-sans/chromatic-red · posture: restrained · brand: Nalluri Associates (logo red sampled from nalluri1.png) · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P_ H_ E_ S_ R_ V_ · weakest: _, filled after the sweep */
+/* Hallmark · waive 22 · ink and greys at zero chroma · Ink prints in plain black, and the logo's wordmark is a hueless black */
+/* Hallmark · swap: hero Poster to Ledge · Ink never sets type on a photograph */
+/* Hallmark · swap: footer adds index columns · a two-branch site with fifteen real destinations a branch */
+@import url("./tokens.css");
+@import url("./base.css");
+@import url("./components.css");
+@import url("./pages/root.css");
+@import url("./pages/home.css");
+@import url("./pages/about.css");
+@import url("./pages/achievements.css");
+@import url("./pages/services.css");
+@import url("./pages/loan.css");
+@import url("./pages/gallery.css");
+@import url("./pages/faqs.css");
+@import url("./pages/contact.css");

@@ -1,0 +1,7 @@
+www/
+node_modules/
+.DS_Store
+.hallmark/before/
+.hallmark/shots/
+.hallmark/*.json
+!.hallmark/log.json
