@@ -85,11 +85,11 @@ export function layout(route, page) {
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+${page.base ? raw(`<base href="${page.base}">\n`) : ''}<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${page.title}</title>
 <meta name="description" content="${page.description}">
 <meta name="author" content="Nalluri Associates">
-<link rel="canonical" href="${SITE_URL}${p}">
+${page.noindex ? raw('<meta name="robots" content="noindex">') : html`<link rel="canonical" href="${SITE_URL}${p}">`}
 <meta property="og:type" content="website">
 <meta property="og:title" content="${page.title}">
 <meta property="og:description" content="${page.description}">

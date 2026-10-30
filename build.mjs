@@ -25,7 +25,7 @@ let count = 0;
 for (const route of routes) {
   const mod = await import(`./src/pages/${route.page}.mjs`);
   const page = mod.default(route);
-  const file = path.join(OUT, route.path, 'index.html');
+  const file = path.join(OUT, route.file || path.join(route.path, 'index.html'));
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, String(layout(route, page)));
   count++;

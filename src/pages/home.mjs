@@ -3,7 +3,7 @@
 // close with contact details per office.
 import { html, rel, img } from '../lib/html.mjs';
 import { offices, lenderLogos } from '../lib/blocks.mjs';
-import { loans, locations, telHref } from '../data/site.mjs';
+import { loans, locations } from '../data/site.mjs';
 
 // How each loan reads inside a sentence.
 const LIST_NAMES = { 'home-loans': 'Home', 'lrd-loans': 'LRD', 'mortgage-loans': 'mortgage', 'commercial-loans': 'commercial', 'site-loans': 'site', 'overdraft-loans': 'overdraft', 'business-loans': 'business', 'car-loans': 'car', 'personal-loans': 'personal' };
@@ -33,7 +33,7 @@ export default function home(route) {
         <p class="lead">20+ years of trusted loan expertise: home, business, personal and more.</p>
         <div class="actions">
           <a class="btn btn--primary" href="${to('contact/')}">Contact us</a>
-          <a class="link" href="${telHref(loc.phone)}">Call ${loc.phone}</a>
+          <a class="link" href="${to('services/')}">See our loans</a>
         </div>
       </div>
     </div>

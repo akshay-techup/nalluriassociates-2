@@ -9,9 +9,10 @@
 .ledge__text { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-lg); align-items: end; }
 .ledge__text h1 { grid-column: 1 / span 8; max-width: 16ch; font-size: var(--text-display); line-height: 0.98; }
 .ledge__side { grid-column: 9 / span 4; display: grid; gap: var(--space-lg); }
+.ledge__side .lead { text-wrap: balance; }
 @media (max-width: 60rem) {
   .ledge__inner { grid-template-rows: auto auto; height: auto; min-height: 0; }
-  .ledge__photo { aspect-ratio: 4 / 3; height: auto; }
+  .ledge__photo { aspect-ratio: 1 / 1; height: auto; }
   .ledge__text h1, .ledge__side { grid-column: 1 / -1; }
 }
 

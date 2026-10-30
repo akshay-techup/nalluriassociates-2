@@ -1,0 +1,41 @@
+/* Root: the branch chooser */
+
+/* Index hero: the head small above, the two branches set large as ruled rows. */
+.chooser { padding-block: var(--space-xl) var(--space-3xl); }
+.chooser__head { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-md); align-items: end; margin-bottom: var(--space-xl); }
+.chooser__head h1 { grid-column: 1 / span 7; max-width: 26ch; font-size: var(--text-3xl); }
+.chooser__head .lead { grid-column: 8 / span 5; }
+
+.chooser__branch { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-lg); align-items: start; padding-block: var(--space-xl); }
+.chooser__name { grid-column: 1 / span 5; grid-row: 1 / span 2; max-width: none; font-size: var(--text-display-s); line-height: 1; }
+.chooser__name a { text-decoration: underline; text-decoration-color: var(--color-rule); text-decoration-thickness: 3px; text-underline-offset: 0.14em; transition: text-decoration-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out); }
+.chooser__name a:hover { text-decoration-color: var(--color-accent); }
+.chooser__name a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 4px; border-radius: 2px; }
+.chooser__offices { grid-column: 6 / span 7; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: var(--space-lg) var(--gap-columns); }
+.chooser__office { display: grid; gap: var(--space-2xs); align-content: start; }
+.chooser__office h3 { font-size: var(--text-title); }
+.chooser__office address { max-width: 46ch; font-style: normal; color: var(--color-ink-2); }
+.chooser__reach { grid-column: 6 / span 7; display: flex; flex-wrap: wrap; gap: var(--space-2xs) var(--space-lg); }
+.chooser__reach a { display: inline-flex; align-items: center; min-height: 32px; }
+
+@media (max-width: 60rem) {
+  .chooser { padding-block: var(--space-xl) var(--space-2xl); }
+  .chooser__head { grid-template-columns: minmax(0, 1fr); margin-bottom: var(--space-xl); }
+  .chooser__head h1, .chooser__head .lead { grid-column: auto; }
+  .chooser__branch { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-md); }
+  .chooser__name, .chooser__offices, .chooser__reach { grid-column: auto; grid-row: auto; }
+  .chooser__reach a { min-height: 44px; }
+}
+
+/* The firm's own words beside the handshake photograph. */
+.root-belief { padding-top: 0; }
+.root-belief__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: center; }
+.root-belief__quote { grid-column: 1 / span 5; margin: 0; }
+.root-belief__quote p { max-width: 45ch; font-size: var(--text-xl); line-height: 1.4; color: var(--color-ink); }
+.root-belief__photo { grid-column: 7 / span 6; aspect-ratio: 4 / 3; }
+.root-belief__photo img { object-position: 62% 50%; }
+@media (max-width: 60rem) {
+  .root-belief__grid { grid-template-columns: minmax(0, 1fr); }
+  .root-belief__quote, .root-belief__photo { grid-column: auto; }
+  .root-belief__quote p { font-size: var(--text-lg); }
+}

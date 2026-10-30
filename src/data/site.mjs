@@ -63,10 +63,10 @@ export const locations = {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.4950308145208!2d80.64579027460857!3d16.501087727733086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35faba0e14ab13%3A0x8c210608c351fffc!2sNalluri%20Associates!5e0!3m2!1sen!2sin!4v1728970385992!5m2!1sen!2sin',
     loans: ['home-loans', 'lrd-loans', 'mortgage-loans', 'commercial-loans', 'site-loans', 'overdraft-loans', 'business-loans', 'car-loans', 'personal-loans'],
     hero: {
-      image: 'images/media/p14.0f51f40f.jpg',
-      alt: 'Four men in a doorway hung with marigolds, one cutting a blue ribbon',
-      caption: 'A ribbon cutting, from the Andhra Pradesh gallery.',
-      position: '50% 40%',
+      image: 'images/media/p24.7ac859de.jpg',
+      alt: 'The Nalluri Associates signboard, in Telugu and English, over a doorway hung with marigolds',
+      caption: 'The Nalluri Associates sign over the office door, hung with marigolds.',
+      position: '35% 45%',
     },
   },
 };

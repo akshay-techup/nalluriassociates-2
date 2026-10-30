@@ -1,0 +1,58 @@
+/* About */
+
+/* The story beside the Pearl Blue photograph, never shown past its 500px. */
+.about-story { padding-top: var(--space-2xl); }
+.about-story__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: center; }
+.about-story__text { grid-column: 1 / span 6; display: grid; gap: var(--space-md); }
+.about-story__text h2 { max-width: 16ch; margin-bottom: var(--space-xs); }
+.about-story__text p { color: var(--color-ink-2); }
+.about-story__figure { grid-column: 8 / span 5; width: 100%; max-width: 500px; margin: 0; justify-self: end; }
+.about-story__photo { aspect-ratio: 500 / 340; }
+.about-story__figure .caption { color: var(--color-muted); }
+@media (max-width: 60rem) {
+  .about-story__grid { grid-template-columns: minmax(0, 1fr); }
+  .about-story__text, .about-story__figure { grid-column: auto; justify-self: start; }
+}
+
+/* The eighteen lenders, set as a ruled index three columns across. */
+.about-lenders__list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: var(--gap-columns); }
+.about-lenders__list li { display: flex; align-items: center; min-height: 56px; padding-block: var(--space-xs); font-size: var(--text-lg); font-weight: 600; }
+@media (max-width: 60rem) { .about-lenders__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 40rem) { .about-lenders__list li { font-size: var(--text-md); min-height: 48px; } }
+
+/* The four figures: the client's own, parted by hairlines, one in red. */
+.about-figures__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 0; padding: 0; list-style: none; }
+.about-figures__list li { display: grid; gap: var(--space-xs); align-content: start; padding-inline: var(--space-lg); border-left: var(--rule-hair) solid var(--color-rule); }
+.about-figures__list li:first-child { padding-left: 0; border-left: 0; }
+.about-figures__list .figure { font-size: var(--text-display-s); font-weight: 700; letter-spacing: var(--tracking-display); line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.about-figures__list li:first-child .figure { color: var(--color-accent); }
+.about-figures__list span { font-size: var(--text-sm); color: var(--color-ink-2); }
+@media (max-width: 60rem) {
+  .about-figures__list { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-xl); }
+  .about-figures__list li:nth-child(3) { padding-left: 0; border-left: 0; }
+}
+
+/* Vision, mission and value: the head on the left, three ruled rows beside it. */
+.about-aims__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: start; }
+.about-aims__head { grid-column: 1 / span 5; display: grid; gap: var(--space-md); }
+.about-aims__rows { grid-column: 7 / span 6; }
+.about-aims__rows > div { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: var(--gap-columns); align-items: baseline; min-height: 96px; padding-block: var(--space-lg); }
+.about-aims__rows dt { grid-column: 1 / span 2; font-size: var(--text-title); font-weight: 700; letter-spacing: var(--tracking-display); }
+.about-aims__rows dd { grid-column: 3 / span 4; margin: 0; font-size: var(--text-lead); color: var(--color-ink-2); }
+@media (max-width: 60rem) {
+  .about-aims__grid { grid-template-columns: minmax(0, 1fr); }
+  .about-aims__head, .about-aims__rows { grid-column: auto; }
+}
+@media (max-width: 40rem) {
+  .about-aims__rows > div { grid-template-columns: minmax(0, 1fr); row-gap: var(--space-2xs); min-height: 0; }
+  .about-aims__rows dt, .about-aims__rows dd { grid-column: auto; }
+}
+
+/* The four steps: a real ordered list, the numeral drawn by a counter. */
+.about-steps__list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-columns); margin: 0; padding: 0; list-style: none; counter-reset: step; border-top: var(--rule-hair) solid var(--color-ink); }
+.about-steps__list li { counter-increment: step; display: grid; gap: var(--space-sm); align-content: start; padding-top: var(--space-lg); }
+.about-steps__list li::before { content: counter(step); font-size: var(--text-3xl); font-weight: 700; letter-spacing: var(--tracking-display); line-height: 1; font-variant-numeric: tabular-nums; color: var(--color-muted); }
+.about-steps__list p { color: var(--color-ink-2); }
+.about-steps__actions { margin-top: var(--space-2xl); }
+@media (max-width: 60rem) { .about-steps__list { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-xl); } }
+@media (max-width: 40rem) { .about-steps__list { grid-template-columns: minmax(0, 1fr); } }

@@ -1,0 +1,48 @@
+/* Achievements */
+
+/* The record: an Index of sixteen rows, the year, the client's line, the lender. */
+.ach-index { width: 100%; border-collapse: collapse; border-top: var(--rule-hair) solid var(--color-ink); font-variant-numeric: tabular-nums; }
+.ach-index th { padding: var(--space-sm) var(--space-md) var(--space-sm) 0; font-size: var(--text-sm); font-weight: 400; color: var(--color-muted); text-align: left; vertical-align: bottom; border-bottom: var(--rule-hair) solid var(--color-rule); }
+.ach-index td { padding: var(--space-md) var(--space-md) var(--space-md) 0; vertical-align: baseline; border-bottom: var(--rule-hair) solid var(--color-rule); }
+.ach-index th:last-child, .ach-index td:last-child { padding-right: 0; }
+.ach-index__year { width: 9rem; white-space: nowrap; }
+td.ach-index__year { font-size: var(--text-title); font-weight: 700; letter-spacing: var(--tracking-display); line-height: 1.2; }
+.ach-index__text { max-width: 60ch; color: var(--color-ink-2); }
+.ach-index__lender { width: 12rem; text-align: left; }
+td.ach-index__lender { font-weight: 600; font-size: var(--text-sm); }
+.ach-index tbody tr:first-child td.ach-index__year { color: var(--color-accent); }
+
+@media (max-width: 60rem) {
+  .ach-index__year { width: 6.5rem; }
+  .ach-index__lender { width: 9rem; }
+}
+@media (max-width: 40rem) {
+  /* The lender is in every line already; at phone width the line carries it. */
+  .ach-index__lender { display: none; }
+  .ach-index__year { width: 6.25rem; white-space: normal; }
+  .ach-index__year span { white-space: nowrap; }
+  .ach-index td.ach-index__year { padding-right: var(--space-sm); }
+  td.ach-index__year { font-size: var(--text-lg); }
+  .ach-index td { padding-block: var(--space-sm); }
+}
+
+/* The shelf: three framed awards on a paper band, each with what its frame says. */
+.ach-shelf__head { grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); }
+.ach-shelf__head > * { grid-column: 1 / span 7; }
+.ach-shelf__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); margin: 0; padding: 0; list-style: none; }
+.ach-shelf__item { display: grid; gap: var(--space-md); margin: 0; }
+.ach-shelf__photo { aspect-ratio: 4 / 5; }
+.ach-shelf__title { font-size: var(--text-title); }
+.ach-shelf__item .caption { margin-top: var(--space-2xs); color: var(--color-ink-2); }
+.ach-shelf__more { margin-top: var(--space-xl); }
+
+@media (max-width: 60rem) {
+  .ach-shelf__head > * { grid-column: 1 / -1; }
+  .ach-shelf__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 40rem) {
+  .ach-shelf__grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* The record opens a step below the Banner, never flush against it. */
+.ach-record { padding-top: var(--space-2xl); }

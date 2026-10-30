@@ -1,0 +1,33 @@
+/* Loan page: Banner holding the photograph beside the introduction, the points as ruled rows, the close on ink */
+
+/* The photograph at no more than its own width, beside the client's introduction. */
+.loan-intro { margin-top: var(--space-2xl); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: center; }
+.loan-intro__photo { grid-column: 1 / span 4; justify-self: start; max-width: 100%; }
+.loan-intro__photo img { width: auto; height: auto; max-width: 100%; }
+.loan-intro__text { grid-column: 5 / span 8; max-width: 62ch; font-size: var(--text-lead); line-height: 1.6; color: var(--color-ink-2); }
+
+/* The points: the head held in view on the left, the rows on the right. */
+.loan-points__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-xl); align-items: start; }
+.loan-points__head { grid-column: 1 / span 4; position: sticky; top: calc(var(--nav-height) + var(--space-2xl)); max-width: 12ch; }
+.loan-points__list { grid-column: 5 / span 8; }
+.loan-points__list li { padding-block: var(--space-lg); font-size: var(--text-lead); line-height: 1.45; color: var(--color-ink-2); }
+.loan-points__list strong { font-weight: 600; color: var(--color-ink); }
+
+/* The close: the closing line and the way in, the branch's other loans beside. */
+.loan-close__grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); row-gap: var(--space-2xl); align-items: start; }
+.loan-close__ask { grid-column: 1 / span 6; display: grid; gap: var(--space-lg); justify-items: start; }
+.loan-close__ask .actions { margin-top: var(--space-xs); gap: var(--space-lg); }
+.loan-close__ask .link:focus-visible { outline-color: var(--color-paper); }
+.loan-close__others { grid-column: 8 / span 5; }
+.loan-close__others h3 { margin-bottom: var(--space-md); font-size: var(--text-title); }
+.loan-close__others ul { margin: 0; padding: 0; list-style: none; border-top: var(--rule-hair) solid var(--color-paper); }
+.loan-close__others li { border-bottom: var(--rule-hair) solid var(--color-ink-2); }
+.loan-close__others a { display: flex; align-items: center; min-height: 52px; font-weight: 600; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 2px; text-underline-offset: 0.3em; transition: text-decoration-color var(--dur-micro) var(--ease-out); }
+.loan-close__others a:hover { text-decoration-color: var(--color-accent); }
+.loan-close__others a:focus-visible { outline: 2px solid var(--color-paper); outline-offset: 2px; border-radius: 2px; }
+
+@media (max-width: 60rem) {
+  .loan-intro, .loan-points__grid, .loan-close__grid { grid-template-columns: minmax(0, 1fr); }
+  .loan-intro__photo, .loan-intro__text, .loan-points__head, .loan-points__list, .loan-close__ask, .loan-close__others { grid-column: auto; }
+  .loan-points__head { position: static; max-width: 20ch; }
+}

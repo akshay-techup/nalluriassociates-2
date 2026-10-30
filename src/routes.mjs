@@ -8,3 +8,6 @@ for (const loc of Object.values(locations)) {
   for (const s of sections) routes.push({ path: `${loc.slug}/${s.slug}/`, page: s.slug, loc: loc.slug, key: s.slug });
   for (const loan of loc.loans) routes.push({ path: `${loc.slug}/services/${loan}/`, page: 'loan', loc: loc.slug, key: 'services', loan });
 }
+
+// Served by the host for any missing address.
+routes.push({ path: '', file: '404.html', page: 'notfound' });
