@@ -181,3 +181,4 @@
 .notfound__link { display: block; padding-block: var(--space-lg); font-size: var(--text-title); font-weight: 600; text-decoration: none; color: inherit; transition: color var(--dur-micro) var(--ease-out); }
 .notfound__link:hover { color: var(--color-accent); }
 .notfound__link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; border-radius: var(--radius-control); }
+.foot__colophon a { overflow-wrap: anywhere; }
